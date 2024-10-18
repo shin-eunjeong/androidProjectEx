@@ -2,6 +2,7 @@ package com.example.jungexweb.ui.viewReCycle;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ public class ViewReCycleFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentViewrecycleBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
         // 구성 내용
         RecyclerView recyclerView = (RecyclerView) binding.rv;
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
