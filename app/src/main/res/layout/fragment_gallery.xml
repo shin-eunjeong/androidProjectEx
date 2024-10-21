@@ -24,12 +24,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:orientation="vertical"
+        android:layout_weight="2">
 
         <ImageView
             android:id="@+id/iv_result"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <SurfaceView
+            android:id="@+id/gallery_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
     </LinearLayout>
     <!--orientation 방향성  horizontal =가로, -->
     <LinearLayout
@@ -41,7 +48,13 @@
             android:id="@+id/btn_capture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="촬영" />
+            android:layout_marginRight="2pt"
+            android:text="사진" />
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동영상" />
 
     </LinearLayout>
 </LinearLayout>

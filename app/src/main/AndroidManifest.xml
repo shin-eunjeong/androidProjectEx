@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!--인터넷 권한 허용  // 카메라가 있어야만 한다 설정 -->
+    <!--카메라 기능 사용 허용  // 카메라가 있어야만 한다 설정 -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
     <uses-permission android:name="android.permission.INTERNET" />
     <!--카메라 권한 허용-->
     <uses-permission android:name="android.permission.CAMERA" />
+
+
     <!--안드로이드 10, api29 부터는 권한 설정필요가 없다네 권한없이 다운로드 가능-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"  android:maxSdkVersion="32" />
+    <!--오디오 권한 허용 / 오디오가 카메라보다 먼저-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <!-- 위치정보 권한 **백그라운드는 민감정보 명확한 이유제공 필요 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -46,6 +51,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+        <!-- 음악 서비스 경로 설정-->
+        <service android:name=".ui.home.MusicService" />
     </application>
 
 </manifest>
